@@ -1,0 +1,37 @@
+<!--pages/shop-cart/index.wxml-->
+<!-- 购物车 -->
+<block wx:for="{{cart}}" wx:key="{{index}}">
+    <view class="shop">
+        <checkbox  checked="{{item.checked}}" bind:tap="checkedTap"  data-index="{{index}}"  data-checked="{{item.checked}}" data-shop_id="{{item.shop_id}}"></checkbox>
+        <view class="shop_img">
+            <image src="/static/eg1.png" mode="widthFix"></image>
+        </view>
+        <view class="shop_det">
+            <view class="shop_det_title">俄罗斯进口糖果巧克力零食黑美人系列芭槟娜礼</view>
+            <view class="shop_det_price">
+                <view class="price_color">￥
+                    <text class="price">{{item.shop_price}}</text>
+                </view>
+                <view class="shop_det_num">
+                    <text class="reduce" bind:tap="deleteGood"
+                                 data-id="{{item.shop_id}}"
+                                 data-num="{{item.shop_number}}"
+                                 data-shop_price="{{item.shop_price}}"
+                    >-</text>
+                    <text class="num">{{item.shop_number}}</text>
+                    <text class="add" bind:tap="addGood" data-id="{{item.shop_id}}"
+                                 data-num="{{item.shop_number}}"
+                                 data-shop_price="{{item.shop_price}}">+</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<!-- 总金额 -->
+<view class="Total">
+    <checkbox >全选</checkbox>
+    <view class="Total_sum">￥<text>{{total}}</text></view>
+    <view class="Total_delete" bind:tap="allDelete"><image src="/static/delete.png" mode="widthFix"></image></view>
+    <button class="orderBtn" >立即购买</button>
+</view>

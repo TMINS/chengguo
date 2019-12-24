@@ -1,0 +1,11 @@
+<!--pages/shop-det/index.wxml-->
+<!-- 商城商品列表 -->
+<view class="food_shop"  
+                      >
+    <image class="food_shop_img" mode="widthFix" src="/static/eg1.png"></image>
+    <view class="food_shop_text"><text>{{item.title}}</text></view>
+    <view class="food_shop_buy">
+        <view class="food_shop_title">¥<text>{{item.price}}</text></view>
+        <button size="mini">购买</button>
+    </view>
+</view>

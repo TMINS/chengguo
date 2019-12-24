@@ -1,0 +1,30 @@
+/* pages/shop-det/index.wxss */
+.food_shop{
+    width: 100%;
+    border-radius: 14rpx;
+    box-shadow:  10rpx 10rpx 10rpx #eee;
+}
+.food_shop_img{
+    display: inline-block;
+    width: 100%;
+}
+
+.food_shop_text{
+    font-size: 30rpx;
+    padding: 16rpx 16rpx 0;
+}
+.food_shop_buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding:16rpx;
+}
+.food_shop_title{
+    font-size: 30rpx;
+    color: #FF9900;
+}
+.food_shop_buy button{
+    font-size: 30rpx;
+    margin: 0;
+}

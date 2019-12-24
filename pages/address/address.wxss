@@ -1,0 +1,99 @@
+/* pages/address/address.wxss */
+
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+/* 地址列表strat */
+
+.addr_item,
+.addr_item2{
+  position: relative;
+  padding: 0 30rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.addr_item{
+  margin-bottom: 20rpx;
+  height: 200rpx;
+}
+.addr_item2{
+  margin-bottom: 10rpx;
+  height: 140rpx;
+}
+.addr_info_wrap{
+  padding-left: 60rpx;
+  width: 100%;
+}
+.addr_info_wrap image{
+  position: absolute;
+  top: 50rpx;
+  left: 35rpx;
+  width: 30rpx;
+  height: 40rpx;
+}
+.addr_info{
+  /* padding: 0 0 0 60rpx; */
+  width: 100%;
+  font-size: 26rpx;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.block{
+  display: block;
+}
+.del{
+  display: none;
+}
+.gray{
+  color: #AAAAAA;
+}
+.margin{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+}
+.padding{
+  padding-right: 80rpx;
+}
+.padding2{
+  padding-left: 70rpx;  
+}
+.addr_selected{
+  margin-top: 20rpx;
+  font-size: 22rpx;
+  width: 100%;
+}
+.addr_selected icon{
+  margin-right: 10rpx;
+  font-size: 32rpx;
+}
+.addr_selected image{
+  margin-right: 10rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+.orign{
+  color: var(--themeColor);
+}
+/* 地址列表strat */
+.add_buttom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+  background-color: var(--themeColor);
+}

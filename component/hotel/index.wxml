@@ -1,0 +1,29 @@
+<!--pages/hotel/index.wxml-->
+<!-- 酒店列表组件 -->
+<view class="hotel" bind:tap="toHotel">
+    <view class="hotel_img">
+        <image src="/static/eg2.png"></image>
+    </view>
+    <view class="hotel_content">
+        <view class="hotel_title">
+            <text>橙果酒店(深圳万国城店)</text>
+        </view>
+        <view class="hotel_score">
+            <view class="hotel_score_det">
+                <text>评分</text>
+                <text class="hotel_score_det_b">5.0</text>
+            </view>
+        </view>
+        <view class="hotel_position">距我直线
+            <text>1.0</text>km</view>
+        <view class="hotel_det">
+            <view class="hotel_virtues">
+                <text>停车场</text>
+                <text>共享充电宝</text>
+            </view>
+            <view class="hotel_price">
+                <text class="hotel_F00">￥</text>
+                <text class="hotel_price_det_b hotel_F00">188</text>起</view>
+        </view>
+    </view>
+</view>

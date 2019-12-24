@@ -1,0 +1,72 @@
+<!--pages/Reserve/index.wxml-->
+<!-- 房间预订页面 -->
+
+<view class="content">
+    <!-- 订单房间信息 -->
+    <view class="order_massage">
+        <view class="order_massage_title">[优先确认]豪华大床房</view>
+        <view class="order_massage_date">
+            <text>12月1日（周日）- 12月2日（周一） 共一晚</text>
+        </view>
+        <view class="order_massage_attr">
+            <text>大床</text>
+            <text>2早</text>
+            <text>有wifi</text>
+        </view>
+        <view class="order_massage_live">广东省深圳市龙岗区平朗路9号万国城C座11楼</view>
+    </view>
+    <!-- 订单人员信息 -->
+    <view class="ID_message">
+        <view class=" mg_repeat">
+            <view class="mg_repeat_color">房间数量</view>
+            <view class="room_num mg_repeat_flex">
+                <text class="reduce" bind:tap="changeRoom" data-oper="-">-</text>
+                <text class="num">{{roomNum}}</text>
+                <text class="add" bind:tap="changeRoom" data-oper="+">+</text>
+            </view>
+        </view>
+        <view class="mg_repeat">
+            <view class="mg_repeat_color">姓名</view>
+            <view class="mg_repeat_flex">
+                <input placeholder="请输入真实姓名" bind:input="watchVal" data-text="name"></input>
+            </view>
+        </view>
+        <view class="mg_repeat">
+            <view class="mg_repeat_color">联系方式</view>
+            <view class="mg_repeat_flex">
+                 <input placeholder="请输入手机号码" bind:input="watchVal" data-text="phone"></input>
+            </view>
+        </view>
+        <view class="mg_repeat">
+            <view class="mg_repeat_color">验证码</view>
+            <view class="vf_code mg_repeat_flex">
+                <input placeholder="请输入您的验证码" bind:input="watchVal" data-text="code"></input>
+                <view class="vf_code_btn" bind:tap="obtainCode">{{vCode}}</view>
+            </view>
+        </view>
+        <view class="discount mg_repeat">
+            <text class="mg_repeat_color">优惠券</text>
+            <image mode="widthFix"  src="/static/fanhui.png" bind:tap="toDiscound"></image>
+        </view>
+        <view class="price mg_repeat">
+            <text></text>
+            <text>￥188.00</text>
+        </view>
+    </view>
+    <!-- 再次确定 -->
+    <view class="assign">
+        <view class="assign_btn" bind:tap="subRoom">确认预订</view>
+        <view class="assign_btn" bind:tap="spell">发起拼团
+            <text >( ￥100 )</text>
+        </view>
+    </view>
+    <!-- tips -->
+    <view class="tips">
+        <view >温馨提示：</view>
+        <view class="tips_txt">
+            <text>1.预订成功后15分钟内可免费取消.</text>
+            <text>2.请认真核查房间信息，避免后续麻烦.</text>
+            <text>3.退房时，请认真检查所带物品，以免丢失重要物件。</text>
+        </view>
+    </view>
+</view>

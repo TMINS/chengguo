@@ -1,0 +1,19 @@
+/* pages/tab-control/index.wxss */
+.tab_control{
+    display: flex;
+    width: 100%;
+    overflow-x:  auto;
+    font-size: 36rpx;
+    box-sizing: border-box;
+    padding: 10rpx;
+}
+.tab_control view{
+    flex: none;
+    width: 25%;
+}
+.active{
+    color: #F90;
+}
+::-webkit-scrollbar{
+    display: none;
+}

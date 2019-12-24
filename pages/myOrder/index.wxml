@@ -1,0 +1,194 @@
+<!--pages/myOrder/index.wxml-->
+<!-- 我的订单 -->
+<view class="my_order">
+    <block wx:for="{{title}}" wx:key="{{index}}">
+        <view class="title {{isActive == index ? 'title_active':''}}" data-index="{{index}}" bind:tap="changeActive">
+            <text>{{item}}</text>
+        </view>
+    </block>
+</view>
+
+<!-- js查询各个栏目列表长度  根据长度响应不同节点 -->
+<!-- 单个商品 -->
+<!-- 待付款 -->
+<view class="shop" wx:if="{{isActive === 1 || show && isActive === 0}}">
+    <view class="shop_type">
+        <text>等待卖家付款</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_message">
+            <view class="shop_img">
+                <image src=""></image>
+            </view>
+            <view class="shop_title">
+                <view>调变KFR-26GW大1匹变频品圆冷暖 壁挂式空调 手机 </view>
+                <view class="shop_txt">银色,智能操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共
+        <text>1</text> 件商品 合计：¥
+        <text>8999.00</text> (含运费
+        <text>0.00</text> )</view>
+    <view class="confirm">
+        <view bind:tap="">付款</view>
+    </view>
+</view>
+<!-- 待发货 -->
+<view class="shop" wx:if="{{isActive === 2 || show && isActive === 0}}">
+    <view class="shop_type">
+        <text>等待发货</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_message">
+            <view class="shop_img">
+                <image src=""></image>
+            </view>
+            <view class="shop_title">
+                <view>调变KFR-26GW大1匹变频品圆冷暖 壁挂式空调 手机 </view>
+                <view class="shop_txt">银色,智能操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共
+        <text>1</text> 件商品 合计：¥
+        <text>8999.00</text> (含运费
+        <text>0.00</text> )</view>
+    <view class="confirm">
+        <view bind:tap="">等待发货</view>
+    </view>
+</view>
+<!-- 待收货 -->
+<view class="shop" wx:if="{{isActive === 3 || show && isActive === 0}}">
+    <view class="shop_type">
+        <text>等待收货</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_message">
+            <view class="shop_img">
+                <image src=""></image>
+            </view>
+            <view class="shop_title">
+                <view>调变KFR-26GW大1匹变频品圆冷暖 壁挂式空调 手机 </view>
+                <view class="shop_txt">银色,智能操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共
+        <text>1</text> 件商品 合计：¥
+        <text>8999.00</text> (含运费
+        <text>0.00</text> )</view>
+    <view class="confirm">
+        <view bind:tap="">确认收货</view>
+    </view>
+</view>
+<!-- 已完成 -->
+<view class="shop" wx:if="{{isActive === 4  || show && isActive === 0}}">
+    <view class="shop_type">
+        <text>交易成功</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_message">
+            <view class="shop_img">
+                <image src=""></image>
+            </view>
+            <view class="shop_title">
+                <view>调变KFR-26GW大1匹变频品圆冷暖 壁挂式空调 手机 </view>
+                <view class="shop_txt">银色,智能操作</view>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共
+        <text>1</text> 件商品 合计：¥
+        <text>8999.00</text> (含运费
+        <text>0.00</text> )</view>
+    <view class="confirm">
+        <view bind:tap="">去评价</view>
+    </view>
+</view>
+
+<!-- 多个商品 -->
+<!-- 待付款 -->
+<view class="shop" wx:if="{{!show && isActive === 0 }}">
+    <view class="shop_type">
+        <text>等待卖家付款</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_list">
+            <view class="shop_list_img" >
+                <image src=""></image>
+            </view>
+            <view class="shop_number">共计<text>6</text> 件商品</view>
+            <view class="shop_more">
+                <image src="/static/right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共<text>1</text> 件商品 合计：¥<text>8999.00</text> (含运费<text>0.00</text> )</view>
+    <view class="confirm_h">
+        <view bind:tap="">取消订单</view><view bind:tap="">付款</view>
+    </view>
+</view>
+<!-- 待发货 -->
+<view class="shop" wx:if="{{!show && isActive === 0 }}">
+    <view class="shop_type">
+        <text>等待商家发货</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_list">
+            <view class="shop_list_img" wx:for="" wx:key="{{index}}">
+                <image src="{{item.img}}"></image>
+            </view>
+            <view class="shop_number">共计<text>6</text> 件商品</view>
+            <view class="shop_more">
+                <image src="/static/right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共<text>1</text> 件商品 合计：¥<text>8999.00</text> (含运费<text>0.00</text> )</view>
+    <view class="confirm_h">
+        <view>等待发货</view>
+    </view>
+</view>
+<!-- 待收货 -->
+<view class="shop" wx:if="{{!show && isActive === 0 }}">
+    <view class="shop_type">
+        <text>等待收货</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_list">
+            <view class="shop_list_img" wx:for="" wx:key="{{index}}">
+                <image src="{{item.img}}"></image>
+            </view>
+            <view class="shop_number">共计<text>6</text> 件商品</view>
+            <view class="shop_more">
+                <image src="/static/right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共<text>1</text> 件商品 合计：¥<text>8999.00</text> (含运费<text>0.00</text> )</view>
+    <view class="confirm_h">
+        <view bind:tap="">等待收货</view>
+    </view>
+</view>
+<!-- 已完成 -->
+<view class="shop" wx:if="{{!show && isActive === 0 }}">
+    <view class="shop_type">
+        <text>交易成功</text>
+    </view>
+    <view class="shop_bj">
+        <view class="shop_list">
+            <view class="shop_list_img" wx:for="" wx:key="{{index}}">
+                <image src="{{item.img}}"></image>
+            </view>
+            <view class="shop_number">共计<text>6</text> 件商品</view>
+            <view class="shop_more">
+                <image src="/static/right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shop_own">共<text>1</text> 件商品 合计：¥<text>8999.00</text> (含运费<text>0.00</text> )</view>
+    <view class="confirm_h">
+        <view bind:tap="">去评价</view>
+    </view>
+</view>

@@ -1,0 +1,153 @@
+/* pages/Reserve/index.wxss */
+
+.content {
+    padding: 18rpx 42rpx;
+}
+
+.order_massage {
+    width: 666rpx;
+    height: 246rpx;
+    background: #f68747;
+    border-radius: 12rpx;
+}
+
+.order_massage_title {
+    font-size: 34rpx;
+    color: #fff;
+    padding: 22rpx 0 0 22rpx;
+    line-height: 36rpx;
+}
+
+.order_massage_date {
+    height: 24rpx;
+    opacity: 1;
+    font-size: 26rpx;
+    font-family: Microsoft YaHei Regular;
+    color: rgba(255, 255, 255, 1);
+    padding: 24rpx 0 16rpx 20rpx;
+}
+
+.order_massage_attr {
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #fff;
+    padding: 16rpx 0 32rpx 22rpx;
+}
+
+.order_massage_live {
+    font-size: 26rpx;
+    color: #fff;
+    line-height: 26rpx;
+    padding: 0 0 40rpx 22rpx;
+    font-style: Microsoft YaHei Regular;
+}
+
+/* 人员信息 */
+
+.ID_message {
+    padding-top: 28rpx;
+}
+.room_num{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.num{
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    border: 1px solid #000;
+    text-align: center;
+}
+.reduce{
+    padding-right: 14rpx;
+}
+.add{
+    padding-left: 14rpx;
+}
+.mg_repeat {
+    height: 72rpx;
+    font-size: 28rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #000;
+}
+
+.mg_repeat_color {
+    color: #333;
+    width: 122rpx;
+}
+
+.mg_repeat_flex {
+    flex: 1;
+    padding-left: 38rpx;
+}
+
+.vf_code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vf_code_btn {
+    padding: 12rpx 16rpx;
+    border: 1px solid #000;
+    border-radius: 6rpx;
+    font-size: 20rpx;
+    margin-right: 14rpx;
+    color: #333;
+}
+
+.discount image {
+    width: 20rpx;
+    height: 36rpx;
+    padding-right: 22rpx;
+    transform: rotate(180deg);
+}
+
+.price {
+    color: #ff5959;
+    font-size: 34rpx;
+    border: none;
+    padding-top: 10rpx;
+}
+
+/*  */
+
+.assign {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 68rpx;
+}
+
+.assign_btn {
+    width: 224rpx;
+    height: 54rpx;
+    font-size: 24rpx;
+    line-height: 54rpx;
+    padding: 14rpx 12rpx;
+    background: #f68747;
+    color: #fff;
+    text-align: center;
+}
+
+.tips {
+    width: 532rpx;
+    margin: 0 auto;
+    display: flex;
+    font-size: 24rpx;
+    color: #bfbfbf;
+    line-height: 36rpx;
+    padding-top: 54rpx;
+}
+.tips view:first-child{
+    width: 122rpx;
+}
+.tips_txt{
+    flex: 1;
+}
+.tips_txt text{
+    display: block;
+}

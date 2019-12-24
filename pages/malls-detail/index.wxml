@@ -1,0 +1,50 @@
+<!--pages/malls-detail/index.wxml-->
+<!-- 商城商品详情 -->
+<view>
+    <swiper indicator-dots="true" autoplay="true">
+        <block>
+            <swiper-item></swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class="content">
+    <view class="content_txt">
+        <text>俄罗斯进口糖果巧克力零食黑美人系列芭槟娜礼</text>
+    </view>
+    <view class="content_massage">
+        <view>
+            <view class="live_det">
+                <text class="send gray">发货</text>
+                <text class="site ">广东深圳</text>
+                <text class="express "> | 快递费</text>
+                <text class="express_price ">0.00</text>
+            </view>
+            <view class="shop_num">
+                <text class="gray">选择数量</text>
+                <text class="shop_num_reduce" bind:tap="reduce">-</text>
+                <text class="number">{{shop_number}}</text>
+                <text class="shop_num_plus" bind:tap="plus">+</text> 
+                <text class="gray">(库存<text>888</text>件)</text>
+            </view>
+        </view>
+        <view class="content_massage_share">
+            <image src="/static/share.png" mode="widthFix"></image>
+            <text>分享好友</text>
+        </view>
+    </view>
+    <view class="shop_price">
+        <view class="shop_prices">￥
+            <text class="shop_prices_big">{{shop_price}}</text>
+        </view>
+        <view class="shop_prices_option">
+            <view class="shop_cart" 
+                        bind:tap="addCart" 
+                        data-num="{{shop_number}}" 
+                        data-price="{{shop_price}}"
+                        
+                        >加入购物车</view>
+            <view class="purchase" bind:tap="orderNow">立即购买</view>
+        </view>
+    </view>
+</view>

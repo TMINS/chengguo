@@ -1,0 +1,15 @@
+<!--pages/comment/index.wxml-->
+<!-- 评论 评分组件 -->
+<view class="comment">
+    <view class="comment_img"></view>
+    <view class="comment_massage">
+        <view class="comment_title">
+            <text>用户名称</text>
+            <text>2019-10-25</text>
+        </view>
+        <view class="comment_star">打分:
+            <block wx:for="{{star_list}}" wx:key="{{index}}"><image src="{{item}}"></image></block>
+        </view>
+        <text class="comment_massage_text">很多很好吃,商家服务非常有效率也非常有礼貌,强力推荐!!!很多很好吃,商家服务非常有效率也非常有礼貌,强力推荐!!!</text>
+    </view>
+</view>

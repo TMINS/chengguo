@@ -1,0 +1,12 @@
+<!--component/select/index.wxml-->
+<view class="select_item">
+    <view class="select_opt">
+        <view>{{title}}</view>
+        <view class="select_img" bind:tap="selectChange">
+            <image src="/static/fanhui.png"></image>
+        </view>
+    </view>
+    <view class="select_list" wx:if='{{ select === true}}'>
+        <view wx:for="{{list}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="optionTap">{{item}}</view>
+    </view>
+</view>

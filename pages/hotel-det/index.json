@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "hotel":"/component/hotel/index"
+  },
+  "navigationBarTitleText":"酒店列表"
+}

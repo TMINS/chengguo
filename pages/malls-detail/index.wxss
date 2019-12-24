@@ -1,0 +1,79 @@
+/* pages/malls-detail/index.wxss */
+
+.content{
+    box-sizing: border-box;
+    padding: 16rpx;
+}
+.content_txt{
+    font-size: 36rpx;
+}
+.content_massage{
+    display: flex;
+    justify-content: space-between;
+}
+.live_det,.shop_num{
+    font-size: 30rpx;
+    padding-bottom: 20rpx;
+    display: flex;
+    align-items: center;
+}
+.shop_num_reduce,.shop_num_plus{
+    padding: 0 16rpx;
+    font-size: 40rpx;
+}
+.site,.express_price {
+    padding-left: 20rpx;
+}
+.number{
+    box-sizing: border-box;
+    padding: 10rpx 30rpx;
+    border: 1rpx solid  #eee;
+}
+.content_massage_share{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+}
+.content_massage_share image{
+    width: 30%;
+}
+.shop_price{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.shop_prices{ 
+    font-size: 30rpx;
+    color: #F90;
+}
+.shop_prices_big{
+    font-size: 60rpx;
+}
+.shop_prices_option{
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+.shop_cart{
+    background: #F90;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    padding: 16rpx;
+
+}
+.purchase{
+    border-radius: 10rpx;
+    background: #F33;
+    box-sizing: border-box;
+    padding: 16rpx;
+}
+
+/*  */
+.gray{
+    color: #666;
+}

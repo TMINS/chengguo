@@ -1,0 +1,84 @@
+<!--pages/order-list/index.wxml-->
+<!-- 下单列表页面 -->
+<!-- 选择地址 -->
+<view class="live">
+    <view class="live_icon">
+        <image mode="widthFix" src="/static/live.png"></image>
+    </view>
+    <view class="live_text">
+        <view class="live_text_user">
+            <text>{{liveList.userName}}</text>
+            <text>{{liveList.phone}}</text>
+        </view>
+        <view class="live_text_det">
+            <text>{{liveList.live}}</text>
+        </view>
+    </view>
+    <view class="live_icon_more">
+        <image mode="widthFix" src="/static/fanhui.png" bind:tap="changeLive"></image>
+    </view>
+</view>
+<view class="bj_line" style="background: url('/static/bj_line.png') center center;background-size:100%;">
+    <!-- <image mode="aspectFit" src="/static/bj_line.png"></image> -->
+</view>
+<!-- 商品信息 -->
+<view class="shop ">
+    <view class="shop_img">
+        <image mode="widthFix"></image>
+    </view>
+    <view class="shop_text">
+        <view class="shop_title">
+            <text>{{shopList.text}}</text>
+        </view>
+        <view class="shop_price">
+            <text class="shop_now">￥{{shopList.newPrice}}</text>
+            <text class="shop_former">￥{{shopList.oldPrice}}</text>
+        </view>
+    </view>
+</view>
+<!-- 订单细节信息 -->
+<view class="fashion">
+    <view class="buy_num fashion_item">
+        <view class="fashion_title">购买数量</view>
+        <view class="buy_num_option">
+            <text class="reduce"  bind:tap="changeRoom" data-oper="-">-</text>
+            <text class="num">{{roomNum}}</text>
+            <text class="add"  bind:tap="changeRoom" data-oper="+">+</text>
+        </view>
+    </view>
+    <view class="delivery fashion_item">
+        <view class="fashion_title">配送方式</view>
+        <view class="delivery_option">
+            <text>快递 免邮</text>
+            <image mode="widthFix" src="/static/fanhui.png"></image>
+        </view>
+    </view>
+    <view class="remark fashion_item">
+        <view class="fashion_title">订单备注</view>
+        <view class="remark_inp">
+            <input  bind:input="watchVal" placeholder="选填：请先和商家协商一致"></input>
+        </view>
+    </view>
+</view>
+<!--  -->
+<view class="fashion">
+    <view class="fashion_item">
+        <view>购买数量</view>
+        <input></input>
+        <view>我的积分
+            <text>666</text>
+        </view>
+    </view>
+    <view class="fashion_item">
+        <view>配送方式</view>
+        <input></input>
+    </view>
+</view>
+
+
+<view class="Submission">
+    <view class="money">应付金额：
+        <text>￥9.8</text>
+    </view>
+    <view class="shop_order">提交订单</view>
+</view>

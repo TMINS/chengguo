@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="head">
+    <view class="userlive">
+        <text>{{city}}</text>
+        <image src="/static/live1.png"></image>
+    </view>
+    <view class="search">
+        <input type="text" class="" confirm-type="search" focus="false" bind:input="searchVal"></input>
+        <view class="search_btn" bind:tap="toSearch">
+            <icon type="search" color="#fff"></icon>
+            <text>搜索</text>
+        </view>
+    </view>
+</view>
+
+<view class="banner">
+    <swiper>
+        <swiper-item><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576586253722&di=2a06f1128a166951d6b6b9eeefab678d&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F7d6ad03862784a0a6120e1300dffc2ebd6a45697.jpg"></image></swiper-item>
+        <swiper-item><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576586458323&di=21cec4f74ab38a10567fb36b51074970&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201310%2F23%2F20131023134151_EEdSw.jpeg"></image></swiper-item>
+        <swiper-item><image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3630096542,3482807049&fm=26&gp=0.jpg"></image></swiper-item>
+    </swiper>
+</view>
+<!--  -->
+<view class="hotel">
+    <view class="hotel_title">
+        <view>人气榜单</view>
+        <view class="hotel_more">更多</view>
+    </view>
+    <view class="hotel_list" wx:for="{{hotelList}}" wx:key="{{index}}">
+        <hotel  hotelList="{{item}}" index="{{index}}" />
+    </view>
+</view>

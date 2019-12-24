@@ -1,0 +1,52 @@
+/* component/select/index.wxss */
+
+.select_item{
+    width: 140rpx;
+    position: relative;
+    /* height: 32rpx; */
+}
+.select_opt{
+    width: 140rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items:   center;
+    border: 1px solid #333;
+}
+.select_opt view:first-child{
+    flex: 1;
+    color: #333;
+    font-size: 20rpx;
+    border-right: 1px solid #333;
+    /* padding: 4rpx 20rpx 4rpx 6rpx; */
+    /* padding:0  20rpx  0 10rpx; */
+    padding-left: 6rpx;
+}
+.select_img{
+    width: 32rpx;
+    height: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 4rpx 6rpx 4rpx 0; */
+}
+.select_opt view image{
+    width: 14rpx;
+    height: 22rpx;
+    transform: rotate(-90deg);
+}
+.select_list{
+    /* display: none; */
+    width: 132rpx;
+    background: #fff;
+    border: 1px solid #333;
+    border-top: none;
+    padding-left: 8rpx;
+    position: absolute;
+    left: 0;
+    top: 36rpx;
+}
+.select_list view{
+    line-height: 32rpx;
+}

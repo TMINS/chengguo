@@ -1,0 +1,20 @@
+<!--pages/malls/index.wxml-->
+<view class="malls_tabbar">
+    <block wx:for="{{shopClass}}" wx:key="{{index}}">
+        <view class="malls_tabbar_item">
+            <image src="{{item.img}}" mode="widthFix" wx:if='{{shopClass.length > 0}}'></image>
+            <text>{{item.title}}</text>
+        </view>
+    </block>
+</view>
+<view class="malls_shop">
+    <view class="malls_shop_title">
+        <text>特产好货</text>
+    </view>
+    <view class="malls_shop_list">
+        <block wx:for="{{item}}" 
+                    wx:key="{{index}}" >
+            <shop-det item="{{item}}" index="{{index}}" data-id="{{item.id}}"    bind:tap="toShopDetail" />
+        </block>
+    </view>
+</view>

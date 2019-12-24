@@ -1,0 +1,59 @@
+<!--pages/address/address.wxml-->
+
+<view class="layout" wx:if="{{show}}">
+  <!-- 地址列表strat  -->
+  <view class="addr_wrap">
+    <!-- 点击的时候将为地址添加一个特定标识符，逻辑处理较多，不用模板 -->
+    <block wx:for="{{addrList}}" wx:key="{{index}}" data-index="{{index}}">
+      <!-- 组件点击更新数据后样式失效：和三目运算符冲突 -->
+      <view class="addr_item">
+        <view class="addr_info_wrap">
+          <image src="/images/dingwei.png"></image>
+          <view class="addr_info">
+            <text decode="{{true}}">收货人&emsp;{{item.userName}}</text>
+            <text class="right">{{item.userTell}}</text>
+            <text class="block gray margin">{{item.userAddr}}</text>
+          </view>
+        </view>
+        <view class="addr_selected">
+          <view class="left padding {{item.isdefual?'orign':''}}" bindtap="handleAddress" data-index="{{index}}">
+            <image src="/images/dui1.png" wx:if="{{item.isdefual}}"></image>
+            <image src="/images/dui.png" wx:else></image>
+            <text class="{{item.isdefual?'orign':''}}">默认地址</text>
+            <!-- 比起单选，这里用字体图标更好 -->
+          </view>
+          <view class="right padding2" bindtap="goAddAddress" data-index="{{index}}">
+            <text>编辑</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 地址列表end  -->
+  <!-- 添加新地址start -->
+  <!-- 页面跳转的时候向页面传参数 -->
+  <view class="add_buttom" bindtap="goAddAddress" data-index="123456">添加新地址</view>
+  <!-- 添加新地址end -->
+</view>
+
+<!-- 从预约时间跳转的特定页面 -->
+<view class="layout" wx:if="{{!show}}">
+  <!-- 地址列表strat  -->
+  <view class="addr_wrap">
+    <!-- 点击的时候将为地址添加一个特定标识符，逻辑处理较多，不用模板 -->
+    <block wx:for="{{addrList}}" wx:key="{{index}}" data-index="{{index}}">
+      <!-- 组件点击更新数据后样式失效：和三目运算符冲突 -->
+      <view class="addr_item2 " data-userName="{{item.userName}}" data-userTell="{{item.userTell}}" data-userAddr="{{item.userAddr}}" bindtap="handleOrderAdrress">
+        <view class="addr_info_wrap">
+          <image src="/images/dingwei.png"></image>
+          <view class="addr_info">
+            <text decode="{{true}}">收货人&emsp;{{item.userName}}</text>
+            <text class="right">{{item.userTell}}</text>
+            <text class="block gray margin">{{item.userAddr}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 地址列表end  -->
+</view>

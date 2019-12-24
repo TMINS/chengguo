@@ -1,0 +1,31 @@
+<!--pages/hotel-det/index.wxml-->
+<view class="search">
+    <input type="text" class="" confirm-type="search" focus="false" bind:input="searchVal"></input>
+    <view class="search_btn" bind:tap="toSearch">
+        <icon type="search" color="#fff"></icon><text>搜索</text>
+    </view>
+</view>
+<!-- 筛选  排序 -->
+<view class="select"  >
+    <view class="select_item" wx:for="{{selectTitle}}"  wx:key="{{index}}" wx:for-item="item" >
+        <view class="select_opt">
+            <view>{{item.title}}</view>
+            <view class="select_img {{selectShow === index ? 'isSelectImg' : ''}}" bind:tap="selectChange" data-message="{{index}}" ><image src="/static/fanhui.png"></image></view>
+        </view>
+        <view class="select_list animated both {{selectShow === index ? 'fadeIn' : 'fadeOut'}}" wx:if="{{selectShow === index}}">
+            <view  wx:for="{{item.selectList}}" wx:key="{{index1}}" wx:for-item="item1" wx:for-index="index1" data-index="{{index}}" data-key="{{index1}}"   bind:tap="optionTap">{{item1}}</view>
+        </view>
+    </view>
+</view>
+<!-- 候选列表 -->
+<view class="tabBar">
+    <block wx:for="{{tabList}}" wx:key="{{index}}">
+        <view class="tabBar_item {{currtIndex == index ? 'active' : ''}} " 
+                   data-index="{{index}}"
+                   bind:tap="onItemClick">{{item}}</view>
+    </block>
+</view>
+<!--  -->
+<view>
+    <hotel />
+</view>

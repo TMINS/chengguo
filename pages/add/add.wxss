@@ -1,0 +1,48 @@
+/* pages/add/add.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+/* 添加地址start */
+.row{
+  font-size: 28rpx;
+  border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  /* 防止塌陷(父盒子没有设定高度,全靠子盒子撑开盒子) */
+  overflow: hidden;
+  background-color: #fff;
+}
+.title{
+  width: 100px;
+  float: left;
+  padding-left: 10px;
+}
+
+.info{
+  margin-left: 100px;
+}
+
+textarea{
+  width: 95%;
+  height: 100rpx;
+  float: left;
+  padding: 0 10px; 
+}
+.right{
+  float: right;
+  margin-right: 60rpx;
+}
+/* 添加地址start */
+.save_buttom{
+  position: fixed;
+  bottom: 150rpx;
+  left: 35rpx;
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  background-color: var(--themeColor);
+}

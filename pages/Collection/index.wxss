@@ -1,0 +1,14 @@
+/* pages/Collection/index.wxss */
+.collection_title{
+    display: flex;
+    height: 86rpx;
+    font-size: 32rpx;
+}
+.collection_title view{
+    width: 50%;
+    text-align: center;
+}
+.active{
+    padding-bottom: 6rpx;
+    border-bottom: 2rpx solid #F90;
+}

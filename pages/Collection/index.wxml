@@ -1,0 +1,18 @@
+<!--pages/Collection/index.wxml-->
+<!-- 收藏页面 -->
+<view class="collection_title" bind:tap="isActive">
+    <view class='' data-isActive="1">
+        <text class='{{isActive ==1 ? "active":""}}' data-isActive="1">酒店收藏<text data-isActive="1">(28)</text></text>
+    </view>
+    <view  data-isActive="2">
+        <text class='{{isActive ==2 ? "active":""}}' data-isActive="2">商品收藏<text data-isActive="2">(18)</text></text>
+    </view>
+</view>
+<!-- 酒店收藏列表   组件-->
+<view wx:if="{{isActive == 1 }}">
+    <hotel hotelList="{{}}" />
+</view>
+<!-- 商品收藏列表 -->
+<view>
+    
+</view>
